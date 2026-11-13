@@ -216,13 +216,13 @@ CREATE TABLE IF NOT EXISTS settings (
     daily_profit REAL DEFAULT 0
     )
  """)
-cur.execute(
+cur.execute("""
 CREATE TABLE IF NOT EXISTS trades (
     user_id INTEGER,
     date TEXT,
     profit REAL
 )
-)
+""")
 db.commit()
 
 # ───── Вспомогательные функции ─────
