@@ -186,8 +186,7 @@ if __name__ == "__main__":
     asyncio.run(start_bot())
 
 ###########################################################################
-Telegram-бот для ведения статистики сделок.
-Работает на aiogram >= 3.7.0 и Python 3.12+.
+# Работает на aiogram >= 3.7.0 и Python 3.12+.
 
 import asyncio, os, sqlite3
 from datetime import date
