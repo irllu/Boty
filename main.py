@@ -188,7 +188,6 @@ if __name__ == "__main__":
 ###########################################################################
 Telegram-бот для ведения статистики сделок.
 Работает на aiogram >= 3.7.0 и Python 3.12+.
-"""
 
 import asyncio, os, sqlite3
 from datetime import date
@@ -199,7 +198,7 @@ from aiogram.filters import Command
 from aiogram.types.input_file import FSInputFile
 from aiogram.client.default import DefaultBotProperties
 
-API_TOKEN = "8118295235:AAGC_avEdUmVgEtsDyObA3Mo7hsQEx4QvRo"  # <-- ВСТАВЬ СЮДА СВОЙ ТОКЕН
+API_TOKEN = "8118295235:AAGC_avEdUmVgEtsDyObA3Mo7hsQEx4QvRo" 
 
 # ───── Настройка aiogram 3.7+ ─────
 bot = Bot(API_TOKEN, default=DefaultBotProperties(parse_mode="HTML"))
@@ -210,15 +209,15 @@ dp.include_router(rt)
 # ───── База данных SQLite ─────
 db = sqlite3.connect("trading_bot.db")
 cur = db.cursor()
-cur.execute("""
+cur.execute(
 CREATE TABLE IF NOT EXISTS settings (
     user_id INTEGER PRIMARY KEY,
     project TEXT DEFAULT '',
     target REAL DEFAULT 0,
     daily_profit REAL DEFAULT 0
 )
-""")
-cur.execute("""
+)
+cur.execute(
 CREATE TABLE IF NOT EXISTS trades (
     user_id INTEGER,
     date TEXT,
