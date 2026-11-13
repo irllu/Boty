@@ -208,14 +208,14 @@ dp.include_router(rt)
 # ───── База данных SQLite ─────
 db = sqlite3.connect("trading_bot.db")
 cur = db.cursor()
-cur.execute(
+cur.execute("""
 CREATE TABLE IF NOT EXISTS settings (
     user_id INTEGER PRIMARY KEY,
     project TEXT DEFAULT '',
     target REAL DEFAULT 0,
     daily_profit REAL DEFAULT 0
     )
- )
+ """)
 cur.execute(
 CREATE TABLE IF NOT EXISTS trades (
     user_id INTEGER,
