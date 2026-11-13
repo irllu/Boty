@@ -224,7 +224,7 @@ CREATE TABLE IF NOT EXISTS trades (
     date TEXT,
     profit REAL
 )
-""")
+)
 db.commit()
 
 # ───── Вспомогательные функции ─────
