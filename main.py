@@ -214,8 +214,8 @@ CREATE TABLE IF NOT EXISTS settings (
     project TEXT DEFAULT '',
     target REAL DEFAULT 0,
     daily_profit REAL DEFAULT 0
-)
-)
+    )
+ )
 cur.execute(
 CREATE TABLE IF NOT EXISTS trades (
     user_id INTEGER,
