@@ -1,3 +1,4 @@
 aiohttp
 matplotlib
 python-telegram-bot
+nest-asyncio
